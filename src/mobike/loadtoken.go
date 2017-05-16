@@ -1,4 +1,4 @@
-package mobiketoken
+package mobike
 
 import (
 	"io/ioutil"
@@ -18,8 +18,8 @@ func printToken(tokens []Token) {
 	}
 }
 
-func LoadToken() []Token {
-	dat, err := ioutil.ReadFile("token.txt")
+func LoadToken(tokenFile string) []Token {
+	dat, err := ioutil.ReadFile(tokenFile)
 	if err != nil {
 		panic(err)
 	}

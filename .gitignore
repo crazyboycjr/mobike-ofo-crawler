@@ -1,6 +1,5 @@
+*
+!*.go
+!README.md
 bin/
 pkg/
-mobike.json
-token.txt
-token2.txt
-*~
