@@ -31,7 +31,7 @@ func main() {
 
 	flag.Parse()
 
-	fout, err := os.Create(ofile)
+	fout, err := os.OpenFile(ofile, os.O_RDWR|os.O_APPEND, 0755)
 	if err != nil {
 		panic(err)
 	}
