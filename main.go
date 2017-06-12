@@ -33,6 +33,11 @@ func contains(module []string, target string) bool {
 	return false
 }
 
+func exist(filename string) bool {
+	_, err := os.Stat(filename)
+	return err == nil || os.IsExist(err)
+}
+
 func main() {
 	runtime.GOMAXPROCS(1) // Do not change
 
@@ -49,7 +54,14 @@ func main() {
 
 	flag.Parse()
 
-	fout, err := os.OpenFile(ofile, os.O_RDWR|os.O_APPEND, 0755)
+	if !exist(ofile) {
+		fout, err := os.Create(ofile)
+		if err != nil {
+			panic(err)
+		}
+		fout.Close()
+	}
+	fout, err := os.OpenFile(ofile, os.O_WRONLY|os.O_APPEND, 0644)
 	if err != nil {
 		panic(err)
 	}

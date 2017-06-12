@@ -3,8 +3,8 @@
 A crawler script, fetching real time bike positions from Mobike API and ofo API~~, saving the records in the Posgresql database~~.
 
 ## Build
-Change to the project directory, and
 ```
+go get github.com/crazyboycjr/mobike-ofo-crawler
 go build -o $GOPATH/bin/mocrawler github.com/crazyboycjr/mobike-ofo-crawler
 ```
 The executable binary file should locate in `$GOPATH/bin/` directory if build successfully.
