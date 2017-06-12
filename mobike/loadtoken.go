@@ -1,10 +1,11 @@
 package mobike
 
 import (
-	"io/ioutil"
-	"encoding/json"
 	"log"
 	"bytes"
+
+	"io/ioutil"
+	"encoding/json"
 )
 
 type Token struct {
