@@ -1,6 +1,6 @@
 # mobike-ofo-crawler
 
-A crawler script, fetching real time bike positions from Mobike API and ofo API~~, saving the records in the Posgresql database~~.
+A crawler script, fetching real time bike positions from Mobike API and ofo API<s>, saving the records in the Posgresql database</s>.
 
 ## Build
 ```
