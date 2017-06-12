@@ -12,7 +12,6 @@ import (
 	"github.com/crazyboycjr/mobike-ofo-crawler/utility"
 )
 
-const conNum = 1
 const ofoUrl string = "https://open.ofo.so/v1/near/bicycle"
 
 func setReqHeader(req *http.Request) {
@@ -96,7 +95,7 @@ func produce(chreq chan Position, chres chan Response) {
 	}
 }
 
-func Run(outfile *os.File) {
+func Run(outfile *os.File, conNum int) {
 	rand.Seed(time.Now().UnixNano())
 	fout = outfile
 

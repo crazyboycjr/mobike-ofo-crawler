@@ -14,7 +14,6 @@ import (
 	"github.com/crazyboycjr/mobike-ofo-crawler/utility"
 )
 
-const conNum = 10
 const mobikeUrl string = "https://mwx.mobike.com/mobike-api/rent/nearbyBikesInfo.do"
 
 var tokens []Token
@@ -130,7 +129,7 @@ func produce(chreq chan Position, chres chan Response) {
 	}
 }
 
-func Run(tokenFile string, outfile *os.File) {
+func Run(tokenFile string, outfile *os.File, conNum int) {
 	rand.Seed(time.Now().UnixNano())
 	tokens = LoadToken(tokenFile)
 	fout = outfile
