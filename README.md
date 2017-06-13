@@ -35,3 +35,10 @@ mocrawler --module mobike -Cmobike 10 --module ofo -Cofo 1
 ## Details
 
 Please look at [details.txt](https://github.com/crazyboycjr/mobike-ofo-crawler/blob/master/details.txt)
+
+## Todo list
+
+- Cannot decide whether a round ends or when a round ends
+- Database support
+- Explore the minimum requests need to send in a round
+- Anti-anti-crawling measures
